@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+  <nav class="navbar navbar-light navbar-expand-lg py-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOmerta" 
+    aria-controls="navbarOmerta" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarOmerta">
+      <div class="navbar-nav mx-auto">
+        <a class="nav-item nav-link" routerLink="/omerta" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">OMERTA</a>
+        <a class="nav-item nav-link" routerLink="/residents" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Резиденты клуба</a>
+        <a class="nav-item nav-link" routerLink="/members" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Члены клуба</a>
+        <a class="nav-item nav-link" routerLink="/stock" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{exact:true}">Акции</a>
+        <a class="nav-item nav-link" routerLink="/mafia-is" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Мафия - это...</a>
+        <a class="nav-item nav-link" routerLink="/photo" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Фотогалерея</a>
+        <a class="nav-item nav-link" routerLink="/reviews" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Отзывы</a>
+        <a class="nav-item nav-link" routerLink="/events" routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact:true}">Ближайшие события</a>
+      </div>
+    </div> 
+  </nav>
+</header>
+<router-outlet></router-outlet>
