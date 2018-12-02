@@ -30,3 +30,11 @@
     color: #cd630f;
     background-color: black; 
 }
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 1.8em;
+}

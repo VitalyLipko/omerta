@@ -1,12 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<header>
+<header class="mb-2 sticky-top">
   <nav class="navbar navbar-light navbar-expand-lg py-0">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOmerta" 
     aria-controls="navbarOmerta" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarOmerta">
-      <div class="navbar-nav mx-auto">
+      <div class="navbar-nav mx-auto text-center">
         <a class="nav-item nav-link" routerLink="/omerta" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">OMERTA</a>
         <a class="nav-item nav-link" routerLink="/residents" routerLinkActive="active"
@@ -28,3 +28,8 @@
   </nav>
 </header>
 <router-outlet></router-outlet>
+<footer>
+  <a href="https://www.instagram.com/omerta_nsk/" target="_blank" class="mr-2"><img src="assets/img/Insta.png"></a>
+  <a href="https://https://vk.com/omerta_nsk" target="_blank"><img src="assets/img/VK.png"></a>
+  <p>Copyright © omerta.ru, 2018</p>
+</footer>

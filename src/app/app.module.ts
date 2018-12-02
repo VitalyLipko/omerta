@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { OmertaComponent } from './omerta/omerta.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResidentsComponent,
-    OmertaComponent
+    OmertaComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
