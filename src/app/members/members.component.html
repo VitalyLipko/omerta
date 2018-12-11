@@ -1,0 +1,41 @@
+<main class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 offset-md-0 offset-xl-3">
+      <ul class="members list-group list-group-flush">
+        <li class="member list-group-item d-inline-flex" *ngFor="let member of members">
+          <p class="mb-0 mx-auto text-center">{{member}}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-6 col-xl-3">
+      <article>
+        <h2 class="text-center">Члены "OMERTA"</h2>
+        <p class="lead">
+          Как стать членом клуба?<br> 
+          Для этого необходимо выполнить два простых условия:
+        </p>
+        <ol class="lead">
+          <li>Посетить не менее 5 событий нашего клуба.</li>
+          <li>Оставить отзыв в обсуждениях сообщества - он не обязательно должен быть хвалебным
+            (хотя нам будет приятно), но и может содержать конструктивную критику и предложения 
+            по выведению клуба на новый уровень!
+          </li>
+        </ol>
+        <p class="lead">
+          Членство в клубе дает право голоса и возможность стать кандидатом в голосовании на лучшего 
+          игрока месяца в игре "Мафия". Член community-клуба "Omerta" <strong>обязуется соблюдать правила клуба</strong>, 
+          за систематическое нарушение которых, он может быть лишен этого статуса <strong>без права восстановления</strong>.
+        </p>
+        <div class="card text-white bg-info mb-2 w-auto">
+          <div class="card-header">Важно</div>
+          <div class="card-body">
+            <p class="card-text text-white">
+              Членство в клубе аннулируется при отсутствии на мероприятиях клуба <strong>более 8 месяцев!</strong>
+              Восстановление статуса возможно при выполнении условий, указанных выше.
+            </p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>

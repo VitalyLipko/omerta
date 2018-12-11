@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ResidentsComponent } from './residents/residents.component';
 import { OmertaComponent } from './omerta/omerta.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { MembersComponent } from './members/members.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResidentsComponent,
     OmertaComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,

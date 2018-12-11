@@ -1,20 +1,21 @@
 <main class="container-fluid">
   <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
-      <ul class="residentsList mx-auto">
-        <div *ngFor="let resident of residents" class="resident mb-2 p-2">
-          <img src="assets/img/residents/{{resident.id + 1}}.jpg" class="resident-img rounded-circle d-inline mr-3">
-          <p class="pb-2 d-inline">{{resident.name}}</p>
-        </div>
+    <div class="col-md-5 offset-md-2 offset-xl-4">
+      <ul class="list-unstyled d-flex flex-column justify-content-center">
+        <li *ngFor="let resident of residents" class="resident media mb-2 p-2 d-inline-flex">
+          <img src="assets/img/residents/{{resident.id + 1}}.jpg" class="resident-img rounded-circle mr-3">
+          <div class="media-body align-self-center">
+            <p class="d-inline-flex">{{resident.name}}</p>
+          </div>          
+        </li>
       </ul>
     </div>
-    <div class="col-3">
+    <div class="col-md-5 col-xl-3">
       <article>
         <h2 class="text-center">Резиденты "OMERTA"</h2>
         <p class="lead">Резиденты – достойнейшие игроки нашего клуба, которые являются своеобразной элитой, лицом клуба.<br> 
           Звание резидента нельзя купить, приобрести и пр. – руководство клуба само провозглашает в резиденты 
-          лучших членов клуба, при этом имея в виду два нерушимых критерия:<br>
+          лучших членов клуба, при этом имея в виду два нерушимых критерия:
         </p>
         <ol class="lead">
           <li>Кандидат должен быть старейшим посетителем клуба, давность его членства в клубе должно исчисляться 
