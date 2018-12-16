@@ -13,7 +13,7 @@
         [routerLinkActiveOptions]="{exact:true}">Резиденты клуба</a>
         <a class="nav-item nav-link" routerLink="/members" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">Члены клуба</a>
-        <a class="nav-item nav-link" routerLink="/stock" routerLinkActive="active" 
+        <a class="nav-item nav-link" routerLink="/promotions" routerLinkActive="active" 
         [routerLinkActiveOptions]="{exact:true}">Акции</a>
         <a class="nav-item nav-link" routerLink="/mafia-is" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">Мафия - это...</a>
@@ -27,7 +27,9 @@
     </div> 
   </nav>
 </header>
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
 <footer>
   <a href="https://www.instagram.com/omerta_nsk/" target="_blank" class="mr-2" rel="noopener">
     <img src="assets/img/Insta.png" alt="Instagram icon">
