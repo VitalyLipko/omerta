@@ -6,6 +6,7 @@ import { OmertaComponent } from './omerta/omerta.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MembersComponent } from './members/members.component';
 import { PromotionsComponent } from './promotions/promotions.component';
+import {MafiaComponent } from './mafia/mafia.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/omerta', pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'omerta', component: OmertaComponent },
   { path: 'members', component: MembersComponent },
   { path: 'promotions', component: PromotionsComponent},
+  { path: 'mafia', component: MafiaComponent},
   { path: '**', component: PageNotFoundComponent }
 ];
 

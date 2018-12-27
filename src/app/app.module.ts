@@ -9,6 +9,7 @@ import { OmertaComponent } from './omerta/omerta.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MembersComponent } from './members/members.component';
 import { PromotionsComponent } from './promotions/promotions.component';
+import {MafiaComponent } from './mafia/mafia.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PromotionsComponent } from './promotions/promotions.component';
     OmertaComponent,
     PageNotFoundComponent,
     MembersComponent,
-    PromotionsComponent
+    PromotionsComponent,
+    MafiaComponent
   ],
   imports: [
     BrowserModule,
