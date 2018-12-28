@@ -1,0 +1,9 @@
+.card {
+    background-color: black;
+    border-color: #cd630f;
+}
+
+.fa-comment {
+    color: #cd630f;
+    font-size: 3rem;
+}

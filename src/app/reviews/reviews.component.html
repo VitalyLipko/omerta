@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <ng-container *ngFor="let review of reviews">
+      <div class="col-md-6 col-xl-4 mb-3">
+        <div class="card" [ngSwitch]="review">
+          <ng-template *ngSwitchCase="'review1'" [ngTemplateOutlet]="r1"></ng-template>
+          <ng-template *ngSwitchCase="'review2'" [ngTemplateOutlet]="r2"></ng-template>
+          <ng-template *ngSwitchCase="'review3'" [ngTemplateOutlet]="r3"></ng-template>
+          <ng-template *ngSwitchCase="'review4'" [ngTemplateOutlet]="r4"></ng-template>
+          <ng-template *ngSwitchCase="'review5'" [ngTemplateOutlet]="r5"></ng-template>
+        </div>
+      </div>
+    </ng-container>
+    <div class="col-md-6 col-xl-4 mb-3 d-flex justify-content-center align-items-center">
+      <div class="media d-inline-flex">
+        <i class="far fa-comment mr-3"></i>
+        <div class="media-body align-self-center ">
+          <p class="lead mb-0">
+            Больше отзывов в нашем <a href="https://vk.com/topic-49688308_30841263" 
+            target="_blank" rel="noopener">сообществе</a> ВК
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #r1>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>
+        Интересное, теплое, уютное место:) невероятная атмосфера, интриги...события....)) интересно 
+        почувствовать себя в новой роли, надеть или наоборот снять "маску", наблюдать, как меняются 
+        окружающие, и как меняешься сам в ходе игры)) и конечно учишься мыслить логично))
+        Спасибо замечательным ведущим за хорошие, интересные воскресные вечера с мафией)
+      </p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title">Александра Бобошко</cite>
+      </footer> 
+    </blockquote>
+  </div>
+</ng-template>
+<ng-template #r2>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>
+        Когда случайно попал на игру, ожиданий особых не было. Омерта же, рвзвернула все 
+        представления об игре. Отличная организация игры и замечательные игроки, против 
+        которых ( и с которыми) очень интересно играть, сделают ваши воскресные вечера, 
+        особенно в долгую сибирскую зиму. Рекомендую всем тем, кто любит удивляться.
+      </p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title">Александр Крапива</cite>
+      </footer> 
+    </blockquote>
+  </div>
+</ng-template>
+<ng-template #r3>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>
+        Действительно замечательное место всегда с большим удовольствием иду на игру. Море эмоций и 
+        буря чувств, которые порой сложно сдержать  уютная, теплая атмосфера, захватывающая игра, 
+        за которой просто теряешь счет времени. Ну и конечно, те веселые, добрые, потрясающие люди, 
+        с которыми ты каждую неделю так ждешь встречу, что хочется ускорить время. 
+      </p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title">Оля Сайдашева</cite>
+      </footer> 
+    </blockquote>
+  </div>
+</ng-template>
+<ng-template #r4>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>
+        Интересные, веселые игры, дружественная атмосфера. Все вечера, которые я провела здесь, 
+        были яркими и приятными. Спасибо организаторам!
+      </p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title">Виктория Бянкина</cite>
+      </footer> 
+    </blockquote>
+  </div>
+</ng-template>
+<ng-template #r5>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>
+        Игра для тех кто хочет и любит спорить и отстаивать правду. Для тех кто любит потрепаться 
+        по делу и без повода. Для тех у кого язык подвешан и без костей. А еще туда приходят много красивых девчонок)))
+      </p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title">Алексей Лебедев</cite>
+      </footer> 
+    </blockquote>
+  </div>
+</ng-template>

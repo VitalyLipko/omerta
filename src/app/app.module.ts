@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { MembersComponent } from './members/members.component';
 import { PromotionsComponent } from './promotions/promotions.component';
 import {MafiaComponent } from './mafia/mafia.component';
+import { ReviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MafiaComponent } from './mafia/mafia.component';
     PageNotFoundComponent,
     MembersComponent,
     PromotionsComponent,
-    MafiaComponent
+    MafiaComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
