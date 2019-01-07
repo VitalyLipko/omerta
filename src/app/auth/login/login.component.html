@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-10 col-sm-8 col-md-4 col-xl-2">
+      <div class="card">
+        <h5 class="card-header text-center">Вход в панель управления</h5>
+        <div class="card-body">
+          <form [formGroup]="adminForm">
+            <div id="input-login" class="mb-3">
+              <p class="mb-0">Логин</p>
+              <input type="text" formControlName="loginInput" required>
+            </div>
+            <div id="input-password">
+              <p class="mb-0">Пароль</p>
+              <input type="text" formControlName="passwordInput" required>
+            </div>
+          </form>
+          <div class="card bg-danger border-danger mt-2" *ngIf="isErrAuth">
+            <div class="card-body">
+              <p class="card-text text-white">Неправильный логин/пароль.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary" (click)="login()" [disabled]="!adminForm.valid">
+            Войти <i class="fas fa-sign-in-alt"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
