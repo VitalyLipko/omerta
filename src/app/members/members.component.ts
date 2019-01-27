@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MembersService } from './members.service';
 
 @Component({
   selector: 'app-members',
@@ -6,18 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./members.component.css']
 })
 export class MembersComponent implements OnInit {
-
-  members: string[] = [ "Вадим Мягков", "Сергей Семиколенов", "Оля Сайдашева", "Чарльз", "Александра Бобошко",
-  "Оля Овчинникова", "Нина Юрченко", "Павел Фролов", "Игорь Бородастов", "Александр Макаров", "Людмила Вершинина",
-  "Катерина Приходько", "Георгий Борисов", "Анастасия Гербер", "Евгений Калинкин", "Артем Ситников", "Наташа Ларина",
-  "Юрий Кувалдин", "Алексей Лебедев", "Александр Крапива", "Александр Колдун", "Алена Чурилина", "Алина Терехова", 
-  "Георгий Пинаев", "Анастасия Адиятулина", "Ольга Давыдова", "Татьяна Рамзина", "Екатерина Шангина", "Ирина Чурилина",
-  "Владимир Зонов", "Юлия Иванова", "Виктория Бянкина", "Артем Котиков", "Дарья Илюшникова", "Наталья Филинкова",
-  "Маргарита Спиридонова", "Геннадий Буров"];
-  
-  constructor() { }
+  members: string[];
+  constructor(public membersService: MembersService) { }
 
   ngOnInit() {
+    this.membersService.get().subscribe(members => this.members = members);
   }
 
 }

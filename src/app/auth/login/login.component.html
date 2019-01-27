@@ -7,18 +7,14 @@
           <form [formGroup]="adminForm">
             <div id="input-login" class="mb-3">
               <p class="mb-0">Логин</p>
-              <input type="text" formControlName="loginInput" required>
+              <input type="text" formControlName="loginInput" class="form-control" required>
             </div>
             <div id="input-password">
               <p class="mb-0">Пароль</p>
-              <input type="text" formControlName="passwordInput" required>
+              <input type="text" formControlName="passwordInput" class="form-control" required>
             </div>
           </form>
-          <div class="card bg-danger border-danger mt-2" *ngIf="isErrAuth">
-            <div class="card-body">
-              <p class="card-text text-white">Неправильный логин/пароль.</p>
-            </div>
-          </div>
+          <p class="text-danger pt-3 mb-0" *ngIf="isErrAuth">Неправильный логин/пароль!</p>
         </div>
         <div class="card-footer">
           <button type="button" class="btn btn-primary" (click)="login()" [disabled]="!adminForm.valid">

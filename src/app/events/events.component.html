@@ -1,14 +1,35 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center align-items-center">
-      <div class="media d-inline-flex">
-        <i class="far fa-calendar-alt mr-3 align-self-center"></i>
-        <div class="media-body align-self-center">
-          <p class="mb-0 text-center">
-            Пока ничего не планируется. Заходите сюда почаще.
-          </p>
+      <ng-container *ngIf="switchState; else elseTemplate">
+        <div class="card">
+          <div class="card-header d-flex flex-row p-2">
+            <div id="date" class="w-25 mr-4">
+              <p class="text-center mb-0">{{eventDate[0]}}<br>{{eventDate[1]}}</p>
+            </div>
+            <div id="title">
+              <h3 class="m-0">Воскресная мафия</h3>
+              <h5 class="lead">
+                Арт-ресторан Квартира 50<br>
+                Кирова 29/1
+              </h5>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <img src="assets/img/events/event.jpg" class="card-img-top" alt="Event image">
+          </div>
+        </div>   
+      </ng-container>
+      <ng-template #elseTemplate>
+        <div class="media d-inline-flex">
+          <i class="far fa-calendar-alt mr-3 align-self-center"></i>
+          <div class="media-body align-self-center">
+            <p class="mb-0 text-center">
+              Пока ничего не планируется. Заходите сюда почаще.
+            </p>
+          </div>
         </div>
-      </div>
+      </ng-template>
     </div>
   </div>
 </div>

@@ -23,9 +23,9 @@
         <a class="nav-item nav-link" routerLink="/events" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">Ближайшие события</a>
         <a class="nav-item nav-link" routerLink="/dashboard" routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact:true}" *ngIf="authService.isLoggedIn">Панель управления</a>
+        [routerLinkActiveOptions]="{exact:true}" *ngIf="this.checkEnableDasboard()">Панель управления</a>
       </div>
-      <button type="button" class="btn btn-primary" (click)="logout()" *ngIf="authService.isLoggedIn">
+      <button type="button" class="btn btn-primary my-2 my-lg-0" (click)="logout()" *ngIf="this.checkEnableDasboard()">
         Выйти <i class="fas fa-sign-out-alt"></i>
       </button>
     </div> 

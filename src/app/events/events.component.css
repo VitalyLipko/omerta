@@ -6,3 +6,19 @@
 .media-body p {
     font-size: 2rem;
 }
+
+.card {
+    background-color: black;
+    border-color: #cd630f;
+    width: 28rem;
+}
+
+#date p {
+    font-size: 2.4rem;
+    line-height: 1em;
+    border-right: 0.1rem solid;
+}
+
+#title .lead{
+    font-size: 1rem;
+}

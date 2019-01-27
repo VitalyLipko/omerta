@@ -1,0 +1,34 @@
+.card {
+    background-color: black;
+    border-color: #cd630f;
+}
+
+.card-header {
+    border-bottom-color: #cd630f;
+    cursor: default;
+}
+
+.member, #add-member {
+    font-size: 1.5rem;
+    background-color: black;
+}
+
+.media-body p {
+    font-size: 1.3rem;
+}
+
+.ng-invalid:not(form)  {
+    border: 3px solid var(--red);
+}
+
+.modal-content {
+    background-color: black;
+}
+  
+.modal-header, .modal-footer{
+    border-color: #cd630f;
+}
+
+#label-switch{
+    color: #cd630f;
+}
