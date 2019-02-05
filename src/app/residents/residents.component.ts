@@ -19,12 +19,13 @@ export class ResidentsComponent implements OnInit {
     {id: 3, name: "Дмитрий Филиппов"},
     {id: 4, name: "Ольга Загривина"},
     {id: 5, name: "Константин Плехотко"},
+    {id: 6, name: "Анастасия Сергеева"}
   ];
 
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }

@@ -15,16 +15,16 @@ import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/omerta', pathMatch: 'full' },
-  { path: 'residents', component: ResidentsComponent },
-  { path: 'omerta', component: OmertaComponent },
-  { path: 'members', component: MembersComponent },
-  { path: 'promotions', component: PromotionsComponent },
-  { path: 'mafia', component: MafiaComponent },
-  { path: 'reviews', component: ReviewsComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
-  { path: '**', component: PageNotFoundComponent }
+  { path: 'residents', component: ResidentsComponent, data: {animation: 'residentsPage'} },
+  { path: 'omerta', component: OmertaComponent, data: {animation: 'omertaPage'} },
+  { path: 'members', component: MembersComponent, data: {animation: 'membersPage'} },
+  { path: 'promotions', component: PromotionsComponent, data: {animation: 'promotionsPage'} },
+  { path: 'mafia', component: MafiaComponent, data: {animation: 'mafiaPage'} },
+  { path: 'reviews', component: ReviewsComponent, data: {animation: 'reviewsPage'} },
+  { path: 'events', component: EventsComponent, data: {animation: 'eventsPage'} },
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], data: {animation: 'dashboardPage'} },
+  { path: 'login', component: LoginComponent, data: {animation: 'loginPage'} },
+  { path: '**', component: PageNotFoundComponent, data: {animation: '404Page'} }
 ];
 
 @NgModule({

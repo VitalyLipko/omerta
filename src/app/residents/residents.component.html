@@ -1,33 +1,36 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-5 offset-md-2 offset-xl-4">
-      <ul class="list-unstyled d-flex flex-column justify-content-center">
-        <li *ngFor="let resident of residents" class="resident media mb-2 p-2 d-inline-flex">
-          <img src="assets/img/residents/{{resident.id + 1}}.jpg" class="resident-img rounded-circle mr-3" alt="face-resident">
-          <div class="media-body align-self-center">
-            <p class="d-inline-flex">{{resident.name}}</p>
-          </div>          
-        </li>
-      </ul>
+    <div class="col-md-7 col-xl-6 offset-lg-1 offset-xl-3 order-2 order-md-1">
+      <h2 class="text-center d-block d-md-none">Резиденты "OMERTA"</h2>
+      <div class="d-flex flex-row flex-wrap justify-content-center">
+        <div *ngFor="let resident of residents">
+          <div class="resident-info resident d-flex align-items-center px-2">
+            <p class="text-center">{{resident.name}}</p>
+          </div>
+          <img src="/assets/img/residents/{{resident.id + 1}}.jpg" alt="{{resident.name}}" class="resident">
+        </div>
+      </div>
     </div>
-    <div class="col-md-5 col-xl-3">
+    <div class="col-md-5 col-lg-4 col-xl-3 order-1 order-md-2">
       <article>
-        <h2 class="text-center">Резиденты "OMERTA"</h2>
-        <p class="lead">Резиденты – достойнейшие игроки нашего клуба, которые являются своеобразной элитой, лицом клуба.<br> 
-          Звание резидента нельзя купить, приобрести и пр. – руководство клуба само провозглашает в резиденты 
+        <h2 class="text-center d-none d-md-block">Резиденты "OMERTA"</h2>
+        <p class="lead">Резиденты – достойнейшие игроки нашего клуба, которые являются своеобразной элитой, лицом
+          клуба.<br>
+          Звание резидента нельзя купить, приобрести и пр. – руководство клуба само провозглашает в резиденты
           лучших членов клуба, при этом имея в виду два нерушимых критерия:
         </p>
         <ol class="lead">
-          <li>Кандидат должен быть старейшим посетителем клуба, давность его членства в клубе должно исчисляться 
+          <li>Кандидат должен быть старейшим посетителем клуба, давность его членства в клубе должно исчисляться
             не одним, не двумя, и даже не шестью месяцами.
           </li>
-          <li>Кандидат должен быть воистину хорошим игроком! Ведь резиденты – это лучшие из лучших! 
+          <li>Кандидат должен быть воистину хорошим игроком! Ведь резиденты – это лучшие из лучших!
             Мастера и элита.
           </li>
-        </ol> 
-        <p class="lead">Все резиденты имеют безоговорочную скидку <strong>50%</strong> на все события клуба. Также резиденты клуба имеют право голоса 
+        </ol>
+        <p class="lead">Все резиденты имеют безоговорочную скидку <strong>50%</strong> на все события клуба. Также
+          резиденты клуба имеют право голоса
           и могут стать кандидатами в голосовании на лучшего игрока месяца в игре "Мафия".
-        </p>  
+        </p>
       </article>
     </div>
   </div>

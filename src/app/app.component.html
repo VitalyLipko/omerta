@@ -31,15 +31,22 @@
     </div> 
   </nav>
 </header>
-<main class="mb-3">
-  <router-outlet></router-outlet>
-</main>
-<footer>
-  <a href="https://www.instagram.com/omerta_nsk/" target="_blank" class="mr-2" rel="noopener">
-    <img src="assets/img/Insta.png" alt="Instagram icon">
-  </a>
-  <a href="https://vk.com/omerta_nsk" target="_blank" rel="noopener">
-    <img src="assets/img/VK.png" alt="VK icon">
-  </a>
-  <p>Copyright © omerta.ru, 2019</p>
-</footer>
+<div [@routeAnimations]="getAnimation(outlet)">
+  <main class="mb-3" id="main-block">
+    <router-outlet #outlet="outlet"></router-outlet>
+    <div class="wrapper-scroll-btn d-none d-lg-block" *ngIf="isEnableScrollBtn">
+      <button type="button" class="btn ml-2" id="scroll-to-up">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </main>
+  <footer>
+    <a href="https://www.instagram.com/omerta_nsk/" target="_blank" class="mr-2" rel="noopener">
+      <img src="assets/img/Insta.png" alt="Instagram icon">
+    </a>
+    <a href="https://vk.com/omerta_nsk" target="_blank" rel="noopener">
+      <img src="assets/img/VK.png" alt="VK icon">
+    </a>
+    <p>Copyright © omerta.ru, 2019</p>
+  </footer> 
+</div>

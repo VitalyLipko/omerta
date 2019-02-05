@@ -1,15 +1,16 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 offset-md-0 offset-xl-3">
+    <div class="col-md-6 offset-md-0 offset-xl-3 order-2 order-md-1">
+      <h2 class="text-center d-block d-md-none">Члены "OMERTA"</h2>
       <ul class="members list-group list-group-flush">
         <li class="member list-group-item d-inline-flex" *ngFor="let member of members">
           <p class="mb-0 mx-auto text-center">{{member}}</p>
         </li>
       </ul>
     </div>
-    <div class="col-md-6 col-xl-3">
+    <div class="col-md-6 col-xl-3 order-1 order-md-2">
       <article>
-        <h2 class="text-center">Члены "OMERTA"</h2>
+        <h2 class="text-center d-none d-md-block">Члены "OMERTA"</h2>
         <p class="lead">
           Как стать членом клуба?<br> 
           Для этого необходимо выполнить два простых условия:

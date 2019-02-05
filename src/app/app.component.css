@@ -15,10 +15,10 @@
 .navbar-nav a:hover {
     color: #cd630f;
     background-color: black;
-    transition: color 0.4s 0.04s ease;
-    -webkit-transition: color 0.4s 0.04s ease;
-    -moz-transition: color 0.4s 0.04s ease;
-    -o-transition: color 0.4s 0.04s ease;
+    transition: color 0.4s ease 0.1s;
+    -webkit-transition: color 0.4s ease 0.1s;
+    -moz-transition: color 0.4s ease 0.1s;
+    -o-transition: color 0.4s ease 0.1s;
 }
 
 .nav-link:active {
@@ -37,4 +37,22 @@ footer {
 
 footer img {
     width: 1.8rem;
+}
+
+#scroll-to-up {
+    background-color: #cd630f;
+    color: black;
+    position: relative;
+    top: 50%;
+}
+
+.wrapper-scroll-btn {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#main-block {
+    min-height: calc(100vh - 150px);
 }
