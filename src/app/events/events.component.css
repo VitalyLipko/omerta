@@ -1,6 +1,6 @@
 .fa-calendar-alt {
     color: #cd630f;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .media-body p {
@@ -14,11 +14,15 @@
 }
 
 #date p {
-    font-size: 2.4rem;
-    line-height: 1em;
-    border-right: 0.1rem solid;
+    font-size: 2.1rem;
+    line-height: 1.2em;
+    border-right: 2px solid;
 }
 
 #title .lead{
     font-size: 1rem;
+}
+
+#photo {
+    border-radius: 0 0 5px 5px;
 }

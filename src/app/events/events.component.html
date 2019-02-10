@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div class="container-fluid pt-4">
   <div class="row justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-6 d-flex justify-content-center align-items-center">
       <ng-container *ngIf="switchState; else elseTemplate">
         <div class="card">
           <div class="card-header d-flex flex-row p-2">
-            <div id="date" class="w-25 mr-4">
-              <p class="text-center mb-0">{{eventDate[0]}}<br>{{eventDate[1]}}</p>
+            <div id="date" class="mr-3">
+              <p class="text-center mb-0 pr-3">{{eventDate[0]}} {{eventDate[1]}}<br>18:00</p>
             </div>
             <div id="title">
               <h3 class="m-0">Воскресная мафия</h3>
@@ -16,7 +16,7 @@
             </div>
           </div>
           <div class="card-body p-0">
-            <img src="assets/img/events/event.jpg" class="card-img-top" alt="Event image">
+            <img src="assets/img/events/event.jpg" class="card-img-top" alt="Event image" id="photo">
           </div>
         </div>   
       </ng-container>

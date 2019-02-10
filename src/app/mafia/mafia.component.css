@@ -1,8 +1,5 @@
-.card-text {
-    font-size: 1.3rem;
-}
-
-.card {
-    border: none;
-    background-color: black;
+.img-custom {
+    max-width: 416px;
+    max-height: 260px;
+    width: 100%;
 }

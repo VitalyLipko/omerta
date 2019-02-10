@@ -12,6 +12,6 @@
     cursor: default;
 }
 
-#card-important .card-header {
-    color: var(--white);
+#card-important {
+    background-color: black;
 }

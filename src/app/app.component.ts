@@ -11,7 +11,6 @@ import { fadeInAnimation } from './animations';
   animations: [fadeInAnimation]
 })
 export class AppComponent implements OnInit {
-  isEnableScrollBtn: boolean = false;
   constructor(public authService: AuthService, public router: Router, private cookieService: CookieService) { }
 
   ngOnInit() {

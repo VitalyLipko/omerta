@@ -1,6 +1,5 @@
 .card {
     background-color: black;
-    border-color: #cd630f;
 }
 
 .fa-comment {
@@ -10,4 +9,9 @@
 
 .fa-external-link-alt {
     width: 1rem;
+}
+
+#review-ref {
+    color: #cd630f;
+    text-decoration: underline;
 }

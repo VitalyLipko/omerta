@@ -1,5 +1,5 @@
-.card {
+.card-event {
+    max-width: 25em;
     background-color: black;
-    border-color: #cd630f;
     height: 95%;
 }
