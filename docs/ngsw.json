@@ -1,0 +1,105 @@
+{
+  "configVersion": 1,
+  "index": "/omerta/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/omerta/favicon.ico",
+        "/omerta/index.html",
+        "/omerta/main.5678510c884b72f163fc.js",
+        "/omerta/polyfills.384efc896e1aec997e04.js",
+        "/omerta/runtime.a5dd35324ddfd942bef1.js",
+        "/omerta/styles.8563d53b37288a198ddf.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/omerta/assets/icons/icon-192x192.png",
+        "/omerta/assets/icons/icon-512x512.png",
+        "/omerta/assets/img/Insta.png",
+        "/omerta/assets/img/VK.png",
+        "/omerta/assets/img/cards/best-player.jpg",
+        "/omerta/assets/img/cards/birthday.jpg",
+        "/omerta/assets/img/cards/residents.jpg",
+        "/omerta/assets/img/emblema.png",
+        "/omerta/assets/img/events/event.jpg",
+        "/omerta/assets/img/mafia/1.jpg",
+        "/omerta/assets/img/mafia/2.jpg",
+        "/omerta/assets/img/mafia/3.jpg",
+        "/omerta/assets/img/mafia/4.jpg",
+        "/omerta/assets/img/mafia/5.jpg",
+        "/omerta/assets/img/mafia/6.jpg",
+        "/omerta/assets/img/mafia/7.jpg",
+        "/omerta/assets/img/mafia/8.jpg",
+        "/omerta/assets/img/mafia/9.jpg",
+        "/omerta/assets/img/residents/1.jpg",
+        "/omerta/assets/img/residents/2.jpg",
+        "/omerta/assets/img/residents/3.jpg",
+        "/omerta/assets/img/residents/4.jpg",
+        "/omerta/assets/img/residents/5.jpg",
+        "/omerta/assets/img/residents/6.jpg",
+        "/omerta/assets/img/residents/7.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/omerta/assets/icons/icon-192x192.png": "cdfe12ef06be9bab91b2058d9e670e023fe25cd3",
+    "/omerta/assets/icons/icon-512x512.png": "7d2f50409f6a4954da869499a27c4a6d970f7781",
+    "/omerta/assets/img/Insta.png": "65fafdeb65a50fea6e6b8fcf98e7a13aa3c8bd06",
+    "/omerta/assets/img/VK.png": "85464b18eee7683c4813af0898bd6f7800c6b553",
+    "/omerta/assets/img/cards/best-player.jpg": "5f562047e27f0c1bb32276e2e18627e3b46bb74d",
+    "/omerta/assets/img/cards/birthday.jpg": "69e57bdb24d2eaaad6b1cf2038237e4a61e5c170",
+    "/omerta/assets/img/cards/residents.jpg": "f19ef38afc0ff310fad72bdf6aab004859e878f9",
+    "/omerta/assets/img/emblema.png": "ba7a1f5366dbdcac4589955ee7550ed3a505dcf0",
+    "/omerta/assets/img/events/event.jpg": "6b6b6841e4cd6fe5b8bbdc75d04ac00972792761",
+    "/omerta/assets/img/mafia/1.jpg": "c44a78a7df162e30fb031440315dd6bd24ccb888",
+    "/omerta/assets/img/mafia/2.jpg": "c1f705c1784f59fa06ca3cfd95f842ceddf4e1ff",
+    "/omerta/assets/img/mafia/3.jpg": "ebbf132cf9cf9132faca47ca040b97a917913534",
+    "/omerta/assets/img/mafia/4.jpg": "98a1696dfd2af1feee95546a44eb62373369e881",
+    "/omerta/assets/img/mafia/5.jpg": "e849f180a35550051d99b7292bbedd0230fd7c8d",
+    "/omerta/assets/img/mafia/6.jpg": "0d7288d8d9ed499cb37fb636e820cfec8d1c90a1",
+    "/omerta/assets/img/mafia/7.jpg": "a84e7c6fe6464d2ccffb8b59acd2cdf973ec347e",
+    "/omerta/assets/img/mafia/8.jpg": "66546842ed41bacecdfb1510acdd6963fb754187",
+    "/omerta/assets/img/mafia/9.jpg": "91435e8d4ab69989ff523ef6acb35900a916fb75",
+    "/omerta/assets/img/residents/1.jpg": "bdbb222f570021a599fdac106bd12d0cfc0ad54d",
+    "/omerta/assets/img/residents/2.jpg": "c78059899e5719a0b02ed1fccc339e64fa0ee596",
+    "/omerta/assets/img/residents/3.jpg": "3f0fe04690cf7bce9e6aa80339b44909f4c99a5b",
+    "/omerta/assets/img/residents/4.jpg": "3231859cd06c0fec81b4b3b97ab0f31010451d3a",
+    "/omerta/assets/img/residents/5.jpg": "951b5d9fd885da4c4fbc2dd10efe2a6b178bc780",
+    "/omerta/assets/img/residents/6.jpg": "49e7cb2b7f39e5acfebfdb2c70da17eb9cc27e62",
+    "/omerta/assets/img/residents/7.jpg": "1569743ce2f96494a5f7c6fa47cb3eb1a0968210",
+    "/omerta/favicon.ico": "28bd2728c45c252b70b68bad02478752c7a60771",
+    "/omerta/index.html": "2b509b325ad9cc08e18955b3d4768b70c80fabeb",
+    "/omerta/main.5678510c884b72f163fc.js": "1d41c91a7f814f2f91a431b40d3fce9342bc1849",
+    "/omerta/polyfills.384efc896e1aec997e04.js": "e19d85fdff2ae6497f65604e5d77407b39c46fca",
+    "/omerta/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/omerta/styles.8563d53b37288a198ddf.css": "a115de1f1b32bc9fa1517535829e375f12417872"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
