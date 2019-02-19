@@ -1,4 +1,4 @@
 .card {
     background-color: black;
-    border-color: #cd630f;
+    border-color: var(--orange);
 }

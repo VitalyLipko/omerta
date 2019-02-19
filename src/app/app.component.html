@@ -1,15 +1,15 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <header class="fixed-top">
   <nav class="navbar navbar-light navbar-expand-lg py-0">
-    <a class="navbar-brand"></a>
+    <a class="navbar-brand p-0" routerLink="/welcome">
+      <img src="assets/img/emblema.png" width="154" height="56" alt="Логотип OMERTA" title="Главная страница" 
+        data-toggle="collapse" data-target=".collapse.show">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOmerta" 
     aria-controls="navbarOmerta" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse text-center" id="navbarOmerta">
-      <div class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <a class="nav-item nav-link" routerLink="/omerta" routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact:true}">OMERTA</a>
+    <div class="collapse navbar-collapse pt-2 pt-lg-0" id="navbarOmerta">
+      <div class="navbar-nav text-center mb-2 mb-lg-0" data-toggle="collapse" data-target=".collapse.show">
         <a class="nav-item nav-link" routerLink="/residents" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">Резиденты клуба</a>
         <a class="nav-item nav-link" routerLink="/members" routerLinkActive="active"
@@ -23,7 +23,7 @@
         <a class="nav-item nav-link" routerLink="/events" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}">Ближайшие события</a>
         <a class="nav-item nav-link" routerLink="/dashboard" routerLinkActive="active"
-        [routerLinkActiveOptions]="{exact:true}" *ngIf="this.checkEnableDasboard()" [class]="">Панель управления</a>
+        [routerLinkActiveOptions]="{exact:true}" *ngIf="this.checkEnableDasboard()">Панель управления</a>
       </div>
       <button type="button" class="btn btn-primary mb-2 mb-lg-0" (click)="logout()" *ngIf="checkEnableDasboard()">
         Выйти <i class="fas fa-sign-out-alt"></i>
@@ -42,6 +42,6 @@
     <a href="https://vk.com/omerta_nsk" target="_blank" rel="noopener">
       <img src="assets/img/VK.png" alt="VK icon">
     </a>
-    <p>© Сommunity-клуб "OMERTA", 2019</p>
+    <p class="pt-1">© Сommunity-клуб "OMERTA", 2019</p>
   </footer> 
 </div>

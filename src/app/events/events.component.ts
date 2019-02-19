@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TagService } from 'src/app/tag.service';
+
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
@@ -11,14 +13,16 @@ export class EventsComponent implements OnInit {
   eventDate: [number, string] = [0, ""];
   private currentDate = new Date();
   switchState: boolean = true;
-  constructor() { }
+  constructor(private tagService: TagService) { }
 
   ngOnInit() {
-    this.calcEventDate();
+    this.tagService.setPageTitle('Community-клуб Omerta | Ближайшие события');
+    this.tagService.setPageDescription('Список мероприятий, которые можно посетить.');
+    this.tagService.setMetaRobots('index, follow');
     if (sessionStorage.getItem("switchState") !== null) {
       this.switchState = sessionStorage.getItem("switchState") === 'true' ? true : false;
     }
-    
+    if (this.switchState) this.calcEventDate();
   }
 
   private calcEventDate() {
@@ -28,5 +32,11 @@ export class EventsComponent implements OnInit {
       this.eventDate[0] = this.currentDate.getDate();
     } else this.eventDate[0] = this.currentDate.getDate();
     this.eventDate[1] = this.months[this.currentDate.getMonth()].substr(0, 3);
+  }
+
+  selectImg(day: number): number {
+    day = Math.round(day / 7);
+    if (day) return day;
+    else return 1;
   }
 }

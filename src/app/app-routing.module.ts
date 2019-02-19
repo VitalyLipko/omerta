@@ -14,9 +14,9 @@ import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/omerta', pathMatch: 'full' },
+  { path: '', redirectTo: '/welcome', pathMatch: 'full', data: {animation: 'welcomePage'} },
   { path: 'residents', component: ResidentsComponent, data: {animation: 'residentsPage'} },
-  { path: 'omerta', component: OmertaComponent, data: {animation: 'omertaPage'} },
+  { path: 'welcome', component: OmertaComponent, data: {animation: 'welcomePage'} },
   { path: 'members', component: MembersComponent, data: {animation: 'membersPage'} },
   { path: 'promotions', component: PromotionsComponent, data: {animation: 'promotionsPage'} },
   { path: 'mafia', component: MafiaComponent, data: {animation: 'mafiaPage'} },

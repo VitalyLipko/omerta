@@ -1,8 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     background-color: black;
+    background-image: url('assets/img/bg-img.png');
 }
 
 h1, h2, h3, h4, h5, h6, p, ol, li, .blockquote-footer, .card-header {
-    color: #cd630f;
+    color: var(--orange);
 } 
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Thin'), local('BebasNeue-Thin'), url('src/assets/fonts/bebasneuethin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('src/assets/fonts/bebasneuelight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Book'), local('BebasNeueBook'), url('src/assets/fonts/bebasneuebook.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('src/assets/fonts/bebasneueregular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('src/assets/fonts/bebasneuebold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    letter-spacing: 6px;
+}
+
+h3, h4, h5, h6 {
+    letter-spacing: 2px;
+}
+
+a {
+    font-family: 'Bebas Neue';
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+p {
+    font-family: 'Bebas Neue';
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.text-accent {
+    font-family: 'Bebas Neue';
+    font-weight: 400;
+    letter-spacing: 3px;
+}

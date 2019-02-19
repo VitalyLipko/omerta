@@ -5,12 +5,12 @@
       <div class="d-flex flex-row flex-wrap justify-content-center">
         <div *ngFor="let resident of residents">
           <!--Для десктопов-->
-          <div class="resident align-items-center px-2 d-none d-lg-flex" id="resident-info-lg">
+          <div class="resident align-items-center px-2 d-none d-lg-flex resident-info-lg">
             <p class="text-center">{{resident.name}}</p>
           </div>
           <!--Для мобильной версии-->
-          <div class="resident align-items-end d-flex d-lg-none" id="resident-info">
-            <p class="text-center mb-0 mx-auto pb-1">{{resident.name}}</p>
+          <div class="resident align-items-end d-flex d-lg-none resident-info">
+            <p class="text-center mb-0 mx-auto">{{resident.name}}</p>
           </div>
           <img src="assets/img/residents/{{resident.id + 1}}.jpg" alt="{{resident.name}}" class="resident">
         </div>
@@ -24,7 +24,7 @@
           Звание резидента нельзя купить, приобрести и пр. – руководство клуба само провозглашает в резиденты
           лучших членов клуба, при этом имея в виду два нерушимых критерия:
         </p>
-        <ol class="lead">
+        <ol class="lead text-accent">
           <li>Кандидат должен быть старейшим посетителем клуба, давность его членства в клубе должно исчисляться
             не одним, не двумя, и даже не шестью месяцами.
           </li>

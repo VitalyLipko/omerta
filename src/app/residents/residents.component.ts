@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TagService } from 'src/app/tag.service';
+
 interface Resident {
   id: number;
   name: string;
@@ -22,10 +24,12 @@ export class ResidentsComponent implements OnInit {
     {id: 6, name: "Анастасия Сергеева"}
   ];
 
-  constructor() { }
+  constructor(private tagService: TagService) { }
 
   ngOnInit() {
-
+    this.tagService.setPageTitle('Community-клуб Omerta | Резиденты клуба');
+    this.tagService.setPageDescription('Список резидентов клуба и информация о том, кто это.');
+    this.tagService.setMetaRobots('index, follow');
   }
 
 }

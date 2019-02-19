@@ -3,7 +3,7 @@
 }
 
 .fa-comment {
-    color: #cd630f;
+    color: var(--orange);
     font-size: 3rem;
 }
 
@@ -12,6 +12,10 @@
 }
 
 #review-ref {
-    color: #cd630f;
+    color: var(--orange);
     text-decoration: underline;
+}
+
+.review-photo {
+    width: 100px;
 }

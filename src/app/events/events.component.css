@@ -1,5 +1,5 @@
 .fa-calendar-alt {
-    color: #cd630f;
+    color: var(--orange);
     font-size: 2rem;
 }
 
@@ -9,7 +9,7 @@
 
 .card {
     background-color: black;
-    border-color: #cd630f;
+    border-color: var(--orange);
     width: 28rem;
 }
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { TagService } from 'src/app/tag.service';
+
 @Component({
   selector: 'app-page-not-found',
   templateUrl: './page-not-found.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tagService: TagService) { }
 
   ngOnInit() {
+    this.tagService.setPageTitle('Community-клуб Omerta | Страница не найдена');
+    this.tagService.setPageDescription('');
+    this.tagService.setMetaRobots('index, follow');
   }
 
 }

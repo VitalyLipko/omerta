@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Md5 } from 'node_modules/md5-typescript';
 import { CookieService } from 'node_modules/ngx-cookie-service';
+import { TagService } from 'src/app/tag.service';
 
 interface hashAuth {
   login: string,
@@ -24,15 +25,19 @@ export class LoginComponent implements OnInit {
   isErrAuth = false;
   salt: string = "s6f82jdl";
   authData: hashAuth = {
-    login: "593470079a749b96a86805cefce3d1be", 
+    login: "593470079a749b96a86805cefce3d1be",
     password: "999f708291df94ba6cadfb3445d406ca"
   };
-  input: hashAuth = {login: "", password: ""};
+  input: hashAuth = { login: "", password: "" };
 
 
-  constructor(public authService: AuthService, public router: Router, private cookieService: CookieService ) { }
+  constructor(public authService: AuthService, public router: Router, private cookieService: CookieService,
+    private tagService: TagService) { }
 
   ngOnInit() {
+    this.tagService.setPageTitle('Community-клуб Omerta | Вход в панель управления');
+    this.tagService.setPageDescription('');
+    this.tagService.setMetaRobots('noindex, nofollow');
   }
 
   login() {
@@ -52,7 +57,7 @@ export class LoginComponent implements OnInit {
     this.input.login = Md5.init(this.adminForm.get('loginInput').value + this.salt);
     this.input.password = Md5.init(this.adminForm.get('passwordInput').value + this.salt);
 
-    if (this.input.login === this.authData.login && this.input.password === this.authData.password) 
+    if (this.input.login === this.authData.login && this.input.password === this.authData.password)
       return true;
     else return false;
   }

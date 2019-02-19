@@ -1,10 +1,10 @@
 .card {
     background-color: black;
-    border-color: #cd630f;
+    border-color: var(--orange);
 }
 
 .card-header {
-    border-bottom-color: #cd630f;
+    border-bottom-color: var(--orange);
     cursor: default;
 }
 
@@ -26,9 +26,9 @@
 }
   
 .modal-header, .modal-footer{
-    border-color: #cd630f;
+    border-color: var(--orange);
 }
 
 #label-switch{
-    color: #cd630f;
+    color: var(--orange);
 }

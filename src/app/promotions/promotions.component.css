@@ -1,5 +1,8 @@
 .card-event {
     max-width: 25em;
-    background-color: black;
     height: 95%;
+}
+
+.card-event img {
+    border-radius: 5px;
 }
