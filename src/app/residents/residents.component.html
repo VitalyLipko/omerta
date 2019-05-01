@@ -3,7 +3,7 @@
     <div class="col-md-7 col-xl-6 offset-lg-1 offset-xl-3 order-2 order-md-1">
       <h2 class="text-center d-block d-md-none">Резиденты "OMERTA"</h2>
       <div class="d-flex flex-row flex-wrap justify-content-center">
-        <div *ngFor="let resident of residents">
+        <div *ngFor="let resident of residents$ | async">
           <!--Для десктопов-->
           <div class="resident align-items-center px-2 d-none d-lg-flex resident-info-lg">
             <p class="text-center">{{resident.name}}</p>
@@ -12,7 +12,7 @@
           <div class="resident align-items-end d-flex d-lg-none resident-info">
             <p class="text-center mb-0 mx-auto">{{resident.name}}</p>
           </div>
-          <img src="assets/img/residents/{{resident.id + 1}}.jpg" alt="{{resident.name}}" class="resident">
+          <img src="assets/img/residents/{{resident.id}}.jpg" alt="{{resident.name}}" class="resident">
         </div>
       </div>
     </div>

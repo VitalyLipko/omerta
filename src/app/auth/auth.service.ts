@@ -13,7 +13,7 @@ export class AuthService {
   constructor() { }
 
   login(): Observable<boolean> {
-    return of(true).pipe(delay(1000), tap(val => this.isLoggedIn = true));
+    return of(true).pipe(delay(500), tap(() => this.isLoggedIn = true));
   }
 
   logout(): void {

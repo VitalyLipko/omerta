@@ -2,35 +2,36 @@
     <div class="row">
         <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 offset-sm-1 offset-md-2 offset-lg-1 offset-xl-2 mb-3 mb-lg-0">
             <div class="card">
-                <div class="card-header text-center" data-toggle="collapse" href="#collapseListMembers"
-                role="button" aria-expanded="true" aria-controls="collapseListMembers">
+                <div class="card-header text-center" data-toggle="collapse" href="#collapseListMembers" role="button"
+                    aria-expanded="true" aria-controls="collapseListMembers">
                     Редактирование списка членов клуба
-                    <span class="badge badge-info">{{members.length}}</span>
+                    <span class="badge badge-info">{{members?.length}}</span>
                 </div>
                 <div class="card-body collapse show" id="collapseListMembers">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item d-inline-flex member" *ngFor="let member of members">
-                            <p class="mb-0 mr-auto">{{member}}</p>
-                            <button type="button" class="btn btn-info mr-3" data-toggle="modal" data-target="#updateModal"
-                            data-backdrop="static" (click)="sendToModal(member)">
+                            <p class="mb-0 mr-auto">{{member.name}}</p>
+                            <button type="button" class="btn btn-info mr-3" data-toggle="modal"
+                                data-target="#updateModal" data-backdrop="static" (click)="sendToModal(member)">
                                 <i class="fas fa-pen"></i>
                             </button>
-                            <button type="button" class="btn btn-danger" (click)="membersService.delete(member)">
+                            <button type="button" class="btn btn-danger" (click)="delete(member)">
                                 <i class="fas fa-trash-alt"></i>
-                            </button>   
+                            </button>
                         </li>
                         <li class="list-group-item member">
                             <label class="h6" for="inputNameMember">Введите имя нового члена клуба</label>
                             <div class="input-group">
-                                <input class="form-control" type="text" [formControl]="nameAddingMember" placeholder="Имя Фамилия"
-                                    aria-label="Поле ввода имени и фамилии нового члена клуба" aria-describedby="buttonAddMember"
-                                    id="inputNameMember">
+                                <input class="form-control" type="text" [formControl]="nameAddingMember"
+                                    placeholder="Имя Фамилия" aria-label="Поле ввода имени и фамилии нового члена клуба"
+                                    aria-describedby="buttonAddMember" id="inputNameMember">
                                 <div class="input-group-append">
-                                    <button type="button" class="btn btn-success" [disabled]="!nameAddingMember.value || nameAddingMember.errors"
-                                        (click)="addNewMember(nameAddingMember.value)" id="buttonAddMember">
+                                    <button type="button" class="btn btn-success"
+                                        [disabled]="!nameAddingMember.value || nameAddingMember.errors"
+                                        (click)="add(nameAddingMember.value)" id="buttonAddMember">
                                         <i class="fas fa-plus"></i>
                                     </button>
-                                </div>  
+                                </div>
                             </div>
                             <small class="form-text text-danger" *ngIf="nameAddingMember.errors">
                                 Длина имени не должна превышать 20 знаков!
@@ -48,7 +49,7 @@
                 <div class="card-body">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="switchStateEvent" (click)="checkState()"
-                        [checked]="switchState ? 'checked' : null">
+                            [checked]="switchState ? 'checked' : null">
                         <label class="custom-control-label" id="label-switch" for="switchStateEvent">
                             Включить отображение текущих мероприятий
                         </label>
@@ -59,7 +60,8 @@
     </div>
 </div>
 <!--Модальное окно редактирования имени члена клуба-->
-<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -67,17 +69,17 @@
             </div>
             <div class="modal-body">
                 <input class="form-control" type="text" [formControl]="updateMember">
-                <small class="form-text text-danger" *ngIf="updateMember.errors">Длина имени не должна превышать 20 знаков!</small>              
+                <small class="form-text text-danger" *ngIf="updateMember.errors">Длина имени не должна превышать 20
+                    знаков!</small>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary mr-3" data-dismiss="modal"
-                [disabled]="!updateMember.value || updateMember.errors" 
-                (click)="membersService.update(previousName, updateMember.value)">
+                    [disabled]="!updateMember.value || updateMember.errors" (click)="update(updateMember)">
                     Сохранить
                 </button>
                 <button type="button" class="btn btn-secondary " data-dismiss="modal">
                     Отмена
-                </button> 
+                </button>
             </div>
         </div>
     </div>

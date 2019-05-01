@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Md5 } from 'node_modules/md5-typescript';
 import { CookieService } from 'node_modules/ngx-cookie-service';
+
 import { TagService } from 'src/app/tag.service';
+import { AuthService } from '../auth.service';
 
 interface hashAuth {
   login: string,
@@ -22,17 +23,20 @@ export class LoginComponent implements OnInit {
     passwordInput: new FormControl('', Validators.required),
   });
 
-  isErrAuth = false;
-  salt: string = "s6f82jdl";
+  isErrAuth: boolean = false;
+  salt: string = 's6f82jdl';
   authData: hashAuth = {
-    login: "593470079a749b96a86805cefce3d1be",
-    password: "999f708291df94ba6cadfb3445d406ca"
+    login: '593470079a749b96a86805cefce3d1be',
+    password: '999f708291df94ba6cadfb3445d406ca'
   };
-  input: hashAuth = { login: "", password: "" };
+  input: hashAuth = { login: '', password: '' };
 
-
-  constructor(public authService: AuthService, public router: Router, private cookieService: CookieService,
-    private tagService: TagService) { }
+  constructor(
+    public authService: AuthService,
+    public router: Router,
+    private cookieService: CookieService,
+    private tagService: TagService
+  ) { }
 
   ngOnInit() {
     this.tagService.setPageTitle('Community-клуб Omerta | Вход в панель управления');
@@ -43,13 +47,11 @@ export class LoginComponent implements OnInit {
   login() {
     this.authService.login().subscribe(() => {
       if (this.authService.isLoggedIn && this.isVerifyForm()) {
-        this.cookieService.set("enableDashboard", "true");
+        this.cookieService.set('enableDashboard', 'true');
         let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/dashboard';
         this.router.navigate([redirect]);
         this.isErrAuth = false;
-      } else {
-        this.isErrAuth = true;
-      }
+      } else this.isErrAuth = true;
     });
   }
 
@@ -59,6 +61,6 @@ export class LoginComponent implements OnInit {
 
     if (this.input.login === this.authData.login && this.input.password === this.authData.password)
       return true;
-    else return false;
+    return false;
   }
 }

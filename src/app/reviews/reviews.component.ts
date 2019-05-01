@@ -8,9 +8,9 @@ import { TagService } from 'src/app/tag.service';
   styleUrls: ['./reviews.component.css']
 })
 export class ReviewsComponent implements OnInit {
-  
+
   reviews: [string, string][] = [
-    ['review1', 'Александра Бобошко'], 
+    ['review1', 'Александра Бобошко'],
     ['review2', 'Александр Крапива'],
     ['review3', 'Оля Сайдашева'],
     ['review4', 'Виктория Бянкина'],

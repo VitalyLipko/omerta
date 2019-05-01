@@ -8,10 +8,8 @@ import { TagService } from 'src/app/tag.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
-  private months: string[] = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август",
-    "сентябрь", "октябрь", "ноябрь", "декабрь"];
-  eventDate: [number, string] = [0, ""];
   private currentDate = new Date();
+  eventDate: number;
   switchState: boolean = true;
   constructor(private tagService: TagService) { }
 
@@ -27,16 +25,13 @@ export class EventsComponent implements OnInit {
 
   private calcEventDate() {
     if (this.currentDate.getDay() !== 0) {
-      this.eventDate[0] = this.currentDate.getDate() + (7 - this.currentDate.getDay());
-      this.currentDate.setDate(this.eventDate[0]);
-      this.eventDate[0] = this.currentDate.getDate();
-    } else this.eventDate[0] = this.currentDate.getDate();
-    this.eventDate[1] = this.months[this.currentDate.getMonth()].substr(0, 3);
+      this.eventDate = this.currentDate.getTime() + (7 - this.currentDate.getDay()) * 24 * 60 * 60 * 1000;
+    } else this.eventDate = this.currentDate.valueOf();
   }
 
   selectImg(day: number): number {
     day = Math.round(day / 7);
     if (day) return day;
-    else return 1;
+    return 1;
   }
 }

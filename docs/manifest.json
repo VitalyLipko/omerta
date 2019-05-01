@@ -5,7 +5,7 @@
   "background_color": "black",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/omerta/",
   "icons": [
     {
       "src": "assets/icons/icon-192x192.png",

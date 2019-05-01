@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { MembersService } from './members.service';
+import { Observable } from 'rxjs';
 
+import { MembersService, Member } from './members.service';
 import { TagService } from 'src/app/tag.service';
+
 
 @Component({
   selector: 'app-members',
@@ -9,14 +11,14 @@ import { TagService } from 'src/app/tag.service';
   styleUrls: ['./members.component.css']
 })
 export class MembersComponent implements OnInit {
-  members: string[];
+  members$: Observable<Member[]>;
   constructor(public membersService: MembersService, private tagService: TagService) { }
 
   ngOnInit() {
     this.tagService.setPageTitle('Community-клуб Omerta | Члены клуба');
     this.tagService.setPageDescription('Список членов клуба "Omerta" и условия попадания в него.');
     this.tagService.setMetaRobots('index, follow');
-    this.membersService.get().subscribe(members => this.members = members);
+    this.members$ = this.membersService.getMembers();
   }
 
 }

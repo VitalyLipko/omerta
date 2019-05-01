@@ -1,27 +1,45 @@
 import { Injectable } from '@angular/core';
-import { Members } from './members';
-import { Observable, of } from 'rxjs';
- 
+import { Observable, throwError } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { retry, catchError } from 'rxjs/operators';
+
+
+export interface Member {
+  id: number;
+  name: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class MembersService {
-  members = Members;
-  constructor() { }
+  private url = 'api/members';
 
-  get(): Observable<string[]> {
-    return of(this.members);
+  constructor(private http: HttpClient) { }
+
+  getMembers(): Observable<Member[]> {
+    return this.http.get<Member[]>(this.url).pipe(retry(3), catchError(this.handleError));
   }
 
-  add(member: string) {
-    this.members.push(member);
+  addMember(member: Member): Observable<Member> {
+    return this.http.post<Member>(this.url, member).pipe(retry(3), catchError(this.handleError));
   }
 
-  update(previousName: string, updateName: string) {
-    this.members.splice(this.members.indexOf(previousName), 1, updateName);
+  updateMember(member: Member): Observable<Member> {
+    return this.http.put<Member>(this.url, member).pipe(retry(3), catchError(this.handleError));
   }
 
-  delete(member: string) {
-    this.members.splice(this.members.indexOf(member), 1);
+  deleteMember(member: Member): Observable<Member> {
+    let urlId = `${this.url}/${member.id}`;
+    return this.http.delete<Member>(urlId).pipe(retry(3), catchError(this.handleError));
+  }
+
+  private handleError(error: HttpErrorResponse) {
+    if (error.error instanceof ErrorEvent) {
+      console.error('An error occurred: ', error.error.message);
+    } else {
+      console.error(`Server returned code ${error.status} ` + `body was: ${error.error}`);
+    }
+    return throwError(error);
   }
 }

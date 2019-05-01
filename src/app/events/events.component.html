@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-header d-flex flex-row p-2">
             <div id="date" class="mr-3">
-              <p class="text-center mb-0 pr-3">{{eventDate[0]}} {{eventDate[1]}}<br>18:00</p>
+              <p class="text-center mb-0 pr-3">{{eventDate | date:'d MMM':'':'ru'}}<br>18:00</p>
             </div>
             <div id="title">
               <h3 class="m-0 custom-font-text">Воскресная мафия</h3>
@@ -16,9 +16,10 @@
             </div>
           </div>
           <div class="card-body p-0">
-            <img src="assets/img/events/mafia_{{selectImg(eventDate[0])}}.jpg" class="card-img-top" alt="Event image" id="photo">
+            <img src="assets/img/events/mafia_{{selectImg(eventDate[0])}}.jpg" class="card-img-top" alt="Event image"
+              id="photo">
           </div>
-        </div>   
+        </div>
       </ng-container>
       <ng-template #elseTemplate>
         <div class="media d-inline-flex">

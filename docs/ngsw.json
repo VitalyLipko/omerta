@@ -1,5 +1,6 @@
 {
   "configVersion": 1,
+  "timestamp": 1556710980204,
   "index": "/omerta/index.html",
   "assetGroups": [
     {
@@ -9,10 +10,10 @@
       "urls": [
         "/omerta/favicon.ico",
         "/omerta/index.html",
-        "/omerta/main.8922bb030b04ac915b22.js",
-        "/omerta/polyfills.384efc896e1aec997e04.js",
-        "/omerta/runtime.a5dd35324ddfd942bef1.js",
-        "/omerta/styles.fb378290929d91ec2284.css"
+        "/omerta/main.js",
+        "/omerta/polyfills.js",
+        "/omerta/runtime.js",
+        "/omerta/styles.css"
       ],
       "patterns": []
     },
@@ -60,12 +61,12 @@
         "/omerta/assets/img/reviews/review_3.jpg",
         "/omerta/assets/img/reviews/review_4.jpg",
         "/omerta/assets/img/reviews/review_5.jpg",
-        "/omerta/bebasneuebold.504fc5bac38e58baef29.woff2",
-        "/omerta/bebasneuebook.d06936a0e4feb6da2240.woff2",
-        "/omerta/bebasneuelight.0cea2c75567b725beaa1.woff2",
-        "/omerta/bebasneueregular.a7c6c96bd21227e0ade2.woff2",
-        "/omerta/bebasneuethin.3b2b64d335b4d1a70abb.woff2",
-        "/omerta/bg-img.8505bf05eaff2bdaf530.png"
+        "/omerta/bebasneuebold.woff2",
+        "/omerta/bebasneuebook.woff2",
+        "/omerta/bebasneuelight.woff2",
+        "/omerta/bebasneueregular.woff2",
+        "/omerta/bebasneuethin.woff2",
+        "/omerta/bg-img.png"
       ],
       "patterns": []
     }
@@ -111,18 +112,18 @@
     "/omerta/assets/img/reviews/review_3.jpg": "4564b15c3b041ff0cac620cfe5aa4f77250eabaf",
     "/omerta/assets/img/reviews/review_4.jpg": "e7fbe9a0d58f2043fb7fff676f877e09dbffde58",
     "/omerta/assets/img/reviews/review_5.jpg": "45e28cb5daa7f7a9434c16f1eb10638155edbf6e",
-    "/omerta/bebasneuebold.504fc5bac38e58baef29.woff2": "8d1be5e808301f13349a9eda29eee42f591ede67",
-    "/omerta/bebasneuebook.d06936a0e4feb6da2240.woff2": "d0522fe17e546f26b538edd7087796a11da1095d",
-    "/omerta/bebasneuelight.0cea2c75567b725beaa1.woff2": "4e238fe2b614e8f10ac29afe1b5e719010ed690f",
-    "/omerta/bebasneueregular.a7c6c96bd21227e0ade2.woff2": "d72a16d96d06badab615085e6d4773ee5bad98fb",
-    "/omerta/bebasneuethin.3b2b64d335b4d1a70abb.woff2": "58d7d0578fd7c6bae5ec231690130e93658ccab2",
-    "/omerta/bg-img.8505bf05eaff2bdaf530.png": "6d10da1fe55d63c2f442e30c926f5a5278f120e4",
+    "/omerta/bebasneuebold.woff2": "8d1be5e808301f13349a9eda29eee42f591ede67",
+    "/omerta/bebasneuebook.woff2": "d0522fe17e546f26b538edd7087796a11da1095d",
+    "/omerta/bebasneuelight.woff2": "4e238fe2b614e8f10ac29afe1b5e719010ed690f",
+    "/omerta/bebasneueregular.woff2": "d72a16d96d06badab615085e6d4773ee5bad98fb",
+    "/omerta/bebasneuethin.woff2": "58d7d0578fd7c6bae5ec231690130e93658ccab2",
+    "/omerta/bg-img.png": "6d10da1fe55d63c2f442e30c926f5a5278f120e4",
     "/omerta/favicon.ico": "28bd2728c45c252b70b68bad02478752c7a60771",
-    "/omerta/index.html": "3f5430577bf40c5cbc401841498e54a2d8195509",
-    "/omerta/main.8922bb030b04ac915b22.js": "e4d035f23a3730e3aa9524d820a6c8c1ab058466",
-    "/omerta/polyfills.384efc896e1aec997e04.js": "e19d85fdff2ae6497f65604e5d77407b39c46fca",
-    "/omerta/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
-    "/omerta/styles.fb378290929d91ec2284.css": "1f0e5a4b17a3b07bc45832d87ac228afedd6f234"
+    "/omerta/index.html": "41dfb8b5be16344a8f0a805298718f1d7cdd382e",
+    "/omerta/main.js": "8b2abe05644290338e43e27fa08a5d38d9e6c12c",
+    "/omerta/polyfills.js": "24fe8f32b4a0c8bae8fc0c9f22601608f3b6a10b",
+    "/omerta/runtime.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/omerta/styles.css": "8ff7076a6b1f82b1088993ac401ae8816527c923"
   },
   "navigationUrls": [
     {

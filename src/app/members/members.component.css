@@ -7,9 +7,6 @@
     letter-spacing: 4px;
     font-weight: 300;
     border-bottom: 0.2rem solid;
-    -moz-border-image: -moz-linear-gradient(to right, rgba(30,87,153,0) 0%, rgba(253, 126, 20, 1) 50%, rgba(125,185,232,0) 100%) 1;
-    -webkit-border-image: -webkit-linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(253, 126, 20, 1) 50%,rgba(125,185,232,0) 100%) 1;
-    -o-border-image: -o-linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(253, 126, 20, 1) 50%,rgba(125,185,232,0) 100%) 1;
     border-image: linear-gradient(to right, rgba(30,87,153,0) 0%,rgba(253, 126, 20, 1) 50%,rgba(125,185,232,0) 100%) 1;
     cursor: default;
 }

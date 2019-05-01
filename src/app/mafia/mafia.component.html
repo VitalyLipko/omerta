@@ -1,37 +1,38 @@
 <div class="container-fluid pt-4">
   <div class="row justify-content-center">
     <div class="col-xl-8">
-      <div *ngFor="let card of cards; even as isEven; odd as isOdd;" 
+      <div *ngFor="let card of cards; even as isEven; odd as isOdd;"
         class="d-flex flex-md-row flex-column justify-content-md-between mb-0 mb-md-3" [ngSwitch]="card">
-          <img src="assets/img/mafia/{{card.slice(4)}}.jpg" class="img-custom mx-auto mx-md-0 mb-2 mb-md-0" 
-            [class.order-md-2]="isEven" alt="img-mafia-rules">
-          <p class="lead pt-md-3" [class.pr-md-5]="isEven" [class.pl-md-5]="isOdd">
-            <ng-template *ngSwitchCase="'card1'" [ngTemplateOutlet]="c1"></ng-template>
-            <ng-template *ngSwitchCase="'card2'" [ngTemplateOutlet]="c2"></ng-template>
-            <ng-template *ngSwitchCase="'card3'" [ngTemplateOutlet]="c3"></ng-template>
-            <ng-template *ngSwitchCase="'card4'" [ngTemplateOutlet]="c4"></ng-template>
-            <ng-template *ngSwitchCase="'card5'" [ngTemplateOutlet]="c5"></ng-template>
-            <ng-template *ngSwitchCase="'card6'" [ngTemplateOutlet]="c6"></ng-template>
-            <ng-template *ngSwitchCase="'card7'" [ngTemplateOutlet]="c7"></ng-template>
-            <ng-template *ngSwitchCase="'card8'" [ngTemplateOutlet]="c8"></ng-template>
-            <ng-template *ngSwitchCase="'card9'" [ngTemplateOutlet]="c9"></ng-template>
-          </p>
+        <img src="assets/img/mafia/{{card.slice(4)}}.jpg" class="img-custom mx-auto mx-md-0 mb-2 mb-md-0"
+          [class.order-md-2]="isEven" alt="img-mafia-rules">
+        <p class="lead pt-md-3" [class.pr-md-5]="isEven" [class.pl-md-5]="isOdd">
+          <ng-template *ngSwitchCase="'card1'" [ngTemplateOutlet]="c1"></ng-template>
+          <ng-template *ngSwitchCase="'card2'" [ngTemplateOutlet]="c2"></ng-template>
+          <ng-template *ngSwitchCase="'card3'" [ngTemplateOutlet]="c3"></ng-template>
+          <ng-template *ngSwitchCase="'card4'" [ngTemplateOutlet]="c4"></ng-template>
+          <ng-template *ngSwitchCase="'card5'" [ngTemplateOutlet]="c5"></ng-template>
+          <ng-template *ngSwitchCase="'card6'" [ngTemplateOutlet]="c6"></ng-template>
+          <ng-template *ngSwitchCase="'card7'" [ngTemplateOutlet]="c7"></ng-template>
+          <ng-template *ngSwitchCase="'card8'" [ngTemplateOutlet]="c8"></ng-template>
+          <ng-template *ngSwitchCase="'card9'" [ngTemplateOutlet]="c9"></ng-template>
+        </p>
       </div>
     </div>
   </div>
 </div>
 
 <ng-template #c1>
-  <span class="text-accent">"Мафия"</span> - ролевая салонная игра, в которую играют все: от мала до велика. 
-  Пожалуй нет в России коллективной игры популярнее и любимее. Несмотря на немудрёные правила и 
-  собственную простоту, она способна выдавать изощрённейшие и азартнейшие игры и не становится 
+  <span class="text-accent">"Мафия"</span> - ролевая салонная игра, в которую играют все: от мала до велика.
+  Пожалуй нет в России коллективной игры популярнее и любимее. Несмотря на немудрёные правила и
+  собственную простоту, она способна выдавать изощрённейшие и азартнейшие игры и не становится
   менее интересной для игроков на протяжении многих лет…
 </ng-template>
 <ng-template #c2>
-  <span class="text-accent">Игроки</span>, случайным образом выбрав карты, оказываются в двух противоборствующих группах: 
+  <span class="text-accent">Игроки</span>, случайным образом выбрав карты, оказываются в двух противоборствующих
+  группах:
   <em>мирные жители</em> и <em>мафия</em>. Задача каждой из сторон: убрать всю группу
-  соперника.<br> 
-  Игровой процесс состоит из двух этапов. 
+  соперника.<br>
+  Игровой процесс состоит из двух этапов.
 </ng-template>
 <ng-template #c3>
   <span class="text-accent">Дневной</span> этап игры, на котором происходит следующее:
@@ -39,21 +40,23 @@
     <li>круговое высказывание( после первой ночи);</li>
     <li>время свободного обсуждения;</li>
     <li>голосование.</li>
-  </ul>  
+  </ul>
   <p class="lead">
     Теперь обо всем поподробней...
   </p>
 </ng-template>
 <ng-template #c4>
-  <span class="text-accent">В начале </span>каждого дня игроки по поднятой руке высказывают свое мнение о ситуации за столом и могут 
-  назвать имена тех людей,которых они считают <em>мафией</em>. Также можно задавать вопросы остальным игрокам.<br> 
-  Дневные обсуждения завершаются голосованием... 
+  <span class="text-accent">В начале </span>каждого дня игроки по поднятой руке высказывают свое мнение о ситуации за
+  столом и могут
+  назвать имена тех людей,которых они считают <em>мафией</em>. Также можно задавать вопросы остальным игрокам.<br>
+  Дневные обсуждения завершаются голосованием...
 </ng-template>
 <ng-template #c5>
-  <span class="text-accent">Каждый</span> игрок может проголосовать только один раз за круг. В случае одинакового количества голосов,
+  <span class="text-accent">Каждый</span> игрок может проголосовать только один раз за круг. В случае одинакового
+  количества голосов,
   объявляется следующий раунд голосования уже между этими кандидатами - до выявления лидера.
   Игрок, набравший больше всего голосов, вскрывает свою карту, говорит последнее слово и покидает
-  стол. 
+  стол.
 </ng-template>
 <ng-template #c6>
   <span class="text-accent">Когда</span> город засыпает, просыпается <em>мафия</em>...Игроки с этой картой должны сообща
@@ -65,16 +68,18 @@
   <span class="text-accent"><em>Доктор</em></span> - получает возможность лечить жертв <em>мафии</em>.
   Он просыпается ночью и указывает на того, кого по его мнению выбрала <em>мафия</em>. Если <em>доктор</em>
   угадывает, то этот игрок остаётся в живых.<br>
-  Нельзя лечить одного и того же человека - в том числе и себя -  два раза подряд.
+  Нельзя лечить одного и того же человека - в том числе и себя - два раза подряд.
 </ng-template>
 <ng-template #c8>
-  <span class="text-accent"><em>Комиссар </em></span>- единственный из мирных жителей, кто может точно узнать <em>мафию</em>. Ночью он
-  просыпается и указывает на игрока, которого подозревает в мафиозной игре. Ведущий знаками показывает 
-  ему результат проверки.<br> 
+  <span class="text-accent"><em>Комиссар </em></span>- единственный из мирных жителей, кто может точно узнать
+  <em>мафию</em>. Ночью он
+  просыпается и указывает на игрока, которого подозревает в мафиозной игре. Ведущий знаками показывает
+  ему результат проверки.<br>
   Важно: <em>комиссар</em> не имеет последнего слова.
 </ng-template>
 <ng-template #c9>
-  <span class="text-accent"><em>Маньяк</em></span> - третья сторона в конфликте интересов за игровым столом. Ночью может убить любого игрока.
-  Побеждает в том случае, если  за столом остаем втроем с <em>мафией</em> и <em>мирным жителем</em> и на голосовании
+  <span class="text-accent"><em>Маньяк</em></span> - третья сторона в конфликте интересов за игровым столом. Ночью может
+  убить любого игрока.
+  Побеждает в том случае, если за столом остаем втроем с <em>мафией</em> и <em>мирным жителем</em> и на голосовании
   из-за стола выходит <em>мафия</em>.
 </ng-template>
